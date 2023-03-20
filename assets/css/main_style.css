@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Roboto;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1e81b0;
+}
+
+.orderlist {
+    max-width: 1200px;
+    max-height: 620px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    transform: translate(0, 10%);
+    background-color: white;
+    border: 1px solid rgba(210,210,210,255);
+    display: flex;
+    border-radius: 5px;
+}
+
+.orderlist-controls {
+    width: 10%;
+    height: 100%;
+    padding: 10px;
+    margin: auto;
+}
+
+.orderlist-buttons {
+    position: relative;
+    width: 50px;
+    height: 200px;
+    left: 65%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orderlist-buttons button {
+    display: block;
+    width: 50px;
+    height: 40px;
+    margin: 3px;
+    border-radius: 5px;
+    background: #3B82F6;
+    border: 1px solid #3B82F6;
+    
+}
+
+.orderlist button:active {
+    background-color: rgba(12, 74, 219, 255);
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+
+  .orderlist button:hover {
+    cursor: pointer;
+  }
+
+.orderlist-container {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+.orderlist-title {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    padding: 1.8%;
+    background-color: #f8f9fa;
+    border: 1px solid rgba(210,210,210,255);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 0;
+}
+
+.orderlist-filter-container {
+    width: 100%;
+    height: 12%;
+    padding: 2%;
+    border: 1px solid rgba(210,210,210,255);
+    border-bottom: 0;
+}
+
+.orderlist-filter {
+    position: relative;
+}
+
+.orderlist-filter input {
+    width: 100%;
+    height: 2rem;
+    margin: 0;
+    padding-right: 2rem;
+    padding-left: .5rem;
+    border: 1px solid rgba(210,210,210,255);
+    border-radius: 5px;
+
+}
+
+.orderlist-filter i {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-130%, -50%);
+}
+
+.orderlist-filter i:hover {
+    cursor: pointer;
+  }
+
+
+.orderlist-list {
+    width: 100%;
+    height: 78%;
+    border: 1px solid rgba(210,210,210,255);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow-y: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;       
+}
+
+.list-articles {
+    height: 100%;
+    padding: 1.6%;
+    margin: auto;
+    align-items: center;
+}
+
+.article {
+    width: 100%;
+    height: 4.25rem;
+    padding: .438rem;
+    align-items: center;
+    position: relative;
+}
+
+.article:hover{
+    background-color: rgba(233,236,239,255);
+}
+
+.article-image {
+    display: inline-block;
+}
+
+.article-image img {
+    width: 75px;
+    height: 50px;
+    margin-right: 1rem;
+    box-shadow: 0 3px 6px #00000029, 0 3px 6px #0000003b;
+}
+
+.article-description {
+    display: inline-block;
+    position: absolute;
+    width: 80%;
+    padding-top: .6rem;
+}
+
+.article-name {
+    position: relative;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.article-category {
+    display: inline-block;
+    line-height: 1;
+    font-size: .75rem;
+}
+
+.article-price {
+    display: inline-block;
+    
+}
+
+.price-badge {
+    float: right;
+    font-size: .85rem;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -125%);
+}
+
+.instock {
+    border-radius: 2px;
+    padding: 0.25em 0.5rem;
+    font-weight: 700;
+    font-size: .6rem;
+    letter-spacing: .3px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background: #C8E6C9;
+    color: #256029;
+}
+
+.lowstock {
+    border-radius: 2px;
+    padding: 0.25em 0.5rem;
+    font-weight: 700;
+    font-size: .6rem;
+    letter-spacing: .3px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background: #FEEDAF;
+    color: #8a5340;
+}
+
+.outofstock {
+    border-radius: 2px;
+    padding: 0.25em 0.5rem;
+    font-weight: 700;
+    font-size: .6rem;
+    letter-spacing: .3px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background: #FFCDD2;
+    color: #c63737;
+}

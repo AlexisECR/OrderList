@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main_style.css">
+    <link rel="stylesheet" href="/assets/css/modal_style.css">
+    <script type="module" src="/assets/ts/data.js"></script>
+    <script type="module" src="assets/ts/modal.js"></script>
+    <script type="module" src="assets/ts/article.js"></script>
+    <script defer type="module" src="assets/ts/main.js"></script>
+</head>
+
+<body>
+    <div class="orderlist">
+        <div class="orderlist-controls">
+            <div class="orderlist-buttons" >
+                <button><i class="bi bi-caret-up-fill"></i></button>
+                <button><i class="bi bi-caret-up"></i></button>
+                <button><i class="bi bi-caret-down"></i></button>
+                <button><i class="bi bi-caret-down-fill"></i></button>
+            </div>
+        </div>
+        <div class="orderlist-container">
+            <div class="orderlist-title">
+                <span>List of Products</span>
+            </div>
+            <div class="orderlist-filter-container">
+                <div class="orderlist-filter">
+                    <input type="text" placeholder="Filter by name" />
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+            <div class="orderlist-list">
+                <div class="list-articles" id="listArticles">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container" id="modal">
+        <div class="modal" >
+            <div class="modal-header" id="modalHeader">
+                <span id="titleModal"></span>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur culpa eius ex illum
+                    libero magnam non quasi quod ratione, suscipit temporibus. Quibusdam, sunt, temporibus. Aspernatur
+                    est maxime quos voluptatibus.</p>
+            </div>
+            <div class="modal-footer text-right">
+                <button id="btnClose" class="btn btn-primary btn-small ml-1">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
