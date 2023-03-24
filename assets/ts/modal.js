@@ -5,20 +5,26 @@ export class Modal {
         this.ref = ref;
     }
     show() {
-        this.ref.style.display = 'block';
+        this.ref.style.display = 'flex';
         this.btnClose = this.ref.querySelector('#btnClose');
         this.btnClose.addEventListener('click', this.hide.bind(this));
     }
     hide() {
         this.ref.style.display = 'none';
     }
-    setTitle(text) {
-        this.ref.querySelector('#titleModal').textContent = text;
+    setInfo(title, price, stock, description) {
+        this.ref.querySelector('.titleModal').textContent = title;
+        this.ref.querySelector('#modalDescription').innerHTML = "Description: <br>" + description;
+        this.ref.querySelector('#modalPrice').textContent = "Price: $" + price;
+        // this.ref.querySelector('#modalStock')!.textContent = "Stock: "+stock;
     }
     setBody(...elements) {
-        this.ref.querySelector('#modalBody').innerHTML = '';
+        this.ref.querySelector('.modal-image').innerHTML = '';
         elements.forEach(element => {
-            this.ref.querySelector('#modalBody').appendChild(element);
+            const slidesImage = document.createElement('div');
+            slidesImage.setAttribute('class', 'slides-img');
+            slidesImage.appendChild(element);
+            this.ref.querySelector('.modal-image').appendChild(slidesImage);
         });
     }
 }

@@ -18,6 +18,7 @@
 </head>
 
 <body>
+
     <div class="orderlist">
         <div class="orderlist-controls">
             <div class="orderlist-buttons" >
@@ -29,11 +30,11 @@
         </div>
         <div class="orderlist-container">
             <div class="orderlist-title">
-                <span>List of Products</span>
+                <span>List of Products </span>
             </div>
             <div class="orderlist-filter-container">
                 <div class="orderlist-filter">
-                    <input type="text" placeholder="Filter by name" />
+                    <input type="text" placeholder="Filter by name" id="filterArticle"/>
                     <i class="bi bi-search"></i>
                 </div>
             </div>
@@ -44,18 +45,25 @@
             </div>
         </div>
     </div>
-    <div class="modal-container" id="modal">
-        <div class="modal" >
-            <div class="modal-header" id="modalHeader">
-                <span id="titleModal"></span>
-            </div>
-            <div class="modal-body" id="modalBody">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur culpa eius ex illum
-                    libero magnam non quasi quod ratione, suscipit temporibus. Quibusdam, sunt, temporibus. Aspernatur
-                    est maxime quos voluptatibus.</p>
-            </div>
-            <div class="modal-footer text-right">
-                <button id="btnClose" class="btn btn-primary btn-small ml-1">Cerrar</button>
+    <div class="modal-container" id="modalContainer">
+        <div class="modal">
+            
+            <div class="modal-body">
+                    <div class="modal-image">
+                    </div>
+                    <div class="modal-header">
+                        <span class="titleModal"></span>
+                    </div>
+                    <div class="modal-description">
+                        <span id="modalDescription"></span>
+                    </div>
+                    <div class="modal-price">
+                        <span id="modalPrice"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnClose" class="btn btn-primary btn-small ml-1">Cerrar</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
