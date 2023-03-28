@@ -179,6 +179,7 @@ export const products = ProductDummy.products.map((product) => {
         price: product.price,
         stock: product.stock,
         category: product.category,
-        images: product.images
+        images: product.images,
+        description: product.description
     };
 });
