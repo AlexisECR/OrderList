@@ -22,6 +22,9 @@ export class Article {
         this.modal = modal;
     }
 
+
+
+
     public createDivArticle(): HTMLDivElement{
         let article: HTMLDivElement = document.createElement("div");
         article.setAttribute("class", "article");
@@ -34,7 +37,14 @@ export class Article {
 
         const icon:HTMLDivElement = this.createIcon();
         article.appendChild(icon);
-        
+
+        article.addEventListener('click', (e : MouseEvent) => {
+            const radio = (e.currentTarget as HTMLDivElement).children[0].firstElementChild;
+            if(!(radio as HTMLInputElement).checked){
+                (radio as HTMLInputElement).checked = true;
+            }
+        })
+
         icon.addEventListener('click',this.handleArticleClickEvent.bind(this))
         return article;
     }
@@ -134,4 +144,7 @@ export class Article {
             return ['outofstock','OUTOFSTOCK']
         }
     }
+
+
+
 }

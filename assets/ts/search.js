@@ -1,28 +1,14 @@
 export class Search {
     listArticles;
-    event;
-    constructor(listArticles, event) {
+    searchText;
+    constructor(listArticles, searchText) {
         this.listArticles = listArticles;
-        this.event = event;
+        this.searchText = searchText;
     }
     searchArticle() {
-        let inputText = this.getInputText();
-        this.listArticles.some(article => {
-            if (((article.title).toUpperCase().includes(inputText))) {
-                const elementShow = document.querySelector('[data-id=\"' + article.id + '\"]');
-                elementShow.style.display = "";
-            }
-            else {
-                const elementHide = document.querySelector('[data-id=\"' + article.id + '\"]');
-                elementHide.style.display = "none";
-            }
+        this.listArticles.forEach(article => {
+            const element = document.querySelector('[data-id=\"' + article.id + '\"]');
+            element.style.display = article.title.toUpperCase().includes(this.searchText) ? '' : 'none';
         });
-    }
-    getInputText() {
-        let text = "";
-        if (this.event.target instanceof HTMLInputElement) {
-            text = (this.event.target.value).toUpperCase();
-        }
-        return text;
     }
 }

@@ -28,6 +28,12 @@ export class Article {
         article.appendChild(this.createArticlePrice());
         const icon = this.createIcon();
         article.appendChild(icon);
+        article.addEventListener('click', (e) => {
+            const radio = e.currentTarget.children[0].firstElementChild;
+            if (!radio.checked) {
+                radio.checked = true;
+            }
+        });
         icon.addEventListener('click', this.handleArticleClickEvent.bind(this));
         return article;
     }

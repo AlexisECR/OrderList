@@ -8,7 +8,7 @@ export class Search {
     searchArticle(){
         this.listArticles.forEach(article => {
                 const element: HTMLDivElement = document.querySelector('[data-id=\"' + article.id + '\"]') as HTMLDivElement;
-                element!.style.display = article.title.toUpperCase().includes(this.searchText)? 'block': 'none';
+                element!.style.display = article.title.toUpperCase().includes(this.searchText)? '': 'none';
          });
     }
 }
