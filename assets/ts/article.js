@@ -1,21 +1,21 @@
 export class Article {
-    id;
-    title;
     price;
     stock;
     category;
     images;
     description;
     modal;
+    id;
+    title;
     constructor(id, title, price, stock, category, images, description, modal) {
-        this.id = id;
-        this.title = title;
         this.price = price;
         this.stock = stock;
         this.category = category;
         this.images = images;
         this.description = description;
         this.modal = modal;
+        this.id = id;
+        this.title = title;
     }
     createDivArticle() {
         let article = document.createElement("div");
@@ -88,6 +88,7 @@ export class Article {
     createRadioButton() {
         let divRadioButton = document.createElement('div');
         divRadioButton.setAttribute('class', 'input-radio');
+        divRadioButton.setAttribute('id', 'inputRadio');
         let radioButtonArticle = document.createElement('input');
         radioButtonArticle.setAttribute('type', 'radio');
         radioButtonArticle.setAttribute('name', 'art');

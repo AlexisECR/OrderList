@@ -1,29 +1,13 @@
 import { Modal } from './modal.js';
 
 export class Article {
-    id: number;
-    title: string;
-    price: number;
-    stock: number;
-    category: string;
-    images: string[];
-    description: string;
-    modal: Modal;
+    id:number;
+    title:string;
 
-
-    constructor(id:number, title: string, price: number, stock: number, category: string, images: string[], description: string, modal:Modal) {
+    constructor(id:number,title: string, private price: number, private stock: number, private category: string, private images: string[], private description: string, private modal:Modal) {
         this.id = id;
         this.title = title;
-        this.price = price;
-        this.stock = stock;
-        this.category = category;
-        this.images = images;
-        this.description = description;
-        this.modal = modal;
     }
-
-
-
 
     public createDivArticle(): HTMLDivElement{
         let article: HTMLDivElement = document.createElement("div");
@@ -45,7 +29,7 @@ export class Article {
             }
         })
 
-        icon.addEventListener('click',this.handleArticleClickEvent.bind(this))
+        icon.addEventListener('click',this.handleArticleClickEvent.bind(this));
         return article;
     }
 
@@ -115,7 +99,7 @@ export class Article {
     public createRadioButton():HTMLDivElement{
         let divRadioButton: HTMLDivElement = document.createElement('div') as HTMLDivElement;
         divRadioButton.setAttribute('class', 'input-radio')
-
+        divRadioButton.setAttribute('id', 'inputRadio')
         let radioButtonArticle: HTMLInputElement = document.createElement('input') as HTMLInputElement;
         radioButtonArticle.setAttribute('type', 'radio');
         radioButtonArticle.setAttribute('name', 'art');
@@ -144,7 +128,5 @@ export class Article {
             return ['outofstock','OUTOFSTOCK']
         }
     }
-
-
 
 }
